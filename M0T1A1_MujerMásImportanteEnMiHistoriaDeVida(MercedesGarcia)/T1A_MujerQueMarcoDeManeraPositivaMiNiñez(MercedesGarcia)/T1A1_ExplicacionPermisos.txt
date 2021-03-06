@@ -1,0 +1,8 @@
+---Explicacion de como funcionan los permisos
+En Linux, el acceso de los usuarios y grupos de usuarios a ciertos recursos del sistema se determina mediante una consulta de admisión que puede ser afirmativa o negativa. Según su filosofía, los usuarios, directorios, archivos y hasta los dispositivos son manejados como un archivo al que se le asignan derechos de acceder a ciertos contenidos. Esto con el fin de permitir o no a un usuario leer, modificar y/o ejecutar archivos según sea el caso.
+
+Un usuario normal en Linux (no root o superusuario), no tiene todos los tipos de accesos habilitados a una gran cantidad de directorios con el objetivo de administrar de manera eficiente y a la vez proteger la integridad del sistema. Un ejemplo de esto, es el acceso a la ruta /etc/hosts. Un usuario normal tiene derechos de lectura, mas no de escritura sobre este archivo.
+
+Los permisos en Linux vienen dados por la triada lectura, escritura y ejecución.
+
+

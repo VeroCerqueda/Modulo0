@@ -1,0 +1,41 @@
+---Explicacion de como funcionan los permisos
+En Linux, el acceso de los usuarios y grupos de usuarios a ciertos recursos del sistema se determina mediante una consulta de admisión que puede ser afirmativa o negativa. Según su filosofía, los usuarios, directorios, archivos y hasta los dispositivos son manejados como un archivo al que se le asignan derechos de acceder a ciertos contenidos. Esto con el fin de permitir o no a un usuario leer, modificar y/o ejecutar archivos según sea el caso.
+
+Un usuario normal en Linux (no root o superusuario), no tiene todos los tipos de accesos habilitados a una gran cantidad de directorios con el objetivo de administrar de manera eficiente y a la vez proteger la integridad del sistema. Un ejemplo de esto, es el acceso a la ruta /etc/hosts. Un usuario normal tiene derechos de lectura, mas no de escritura sobre este archivo.
+
+Los permisos en Linux vienen dados por la triada lectura, escritura y ejecución.
+
+
+
+---Agregar una explicación de como funcionan los permisos en
+las carpetas
+LECTURA, ESCRITURA Y EJECUCIÓN
+Lectura: del inglés read y abreviado como r, que indica no solo la posibilidad de leer el archivo, sino también de listarlo con el comando básico ls.
+
+Escritura: del inglés write y abreviado como w, que una vez activo permite a el usuario realizar modificaciones en el archivo.
+
+Ejecución: del inglés execute y abreviado como x, permite al usuario la ejecución del archivo.
+
+Es una triada binaria porque estos permisos tienen un valor especifico, pueden tener dos estados. Si el bit está en 0 quiere decir que no está activo, por el contrario si el bit está en 1, está activo. Si alguno de estos permisos está desactivado, para efectos del comando ls al momento de listar un archivo se le asigna un guion ‘-‘.
+
+Estos permisos pueden ser representados en notación octal, que no es más que un valor en base 8. Siendo así, si el primer elemento de izquierda a derecha esta activo (lectura) su valor es 4. Si el segundo elemento está activo (escritura) su valor es dos y si el tercer elemento está activo (ejecución), su valor es 1.
+
+Por ejemplo, si quisiéramos representar en notación octal permisos de lectura y ejecución, el valor sería 5. Para permisos de lectura y escritura el valor es 6 y para permisos de lectura, escritura y ejecución el valor es 7.
+
+CATEGORÍAS DE LOS PERMISOS
+Usuario o propietario (del inglés user, abreviada como u)
+
+Grupo (del inglés group, abreviada como g)
+
+Otros (del inglés others, abreviada como o)
+
+Entonces, cada categoría de permisos se representa con tres carácteres. El primer conjunto de carácteres representa la categoría de usuario, el segundo conjunto representa la categoría de grupo y el tercer conjunto representa a la categoría otros. Cada uno de los tres carácteres representa los permisos de lectura, escritura y ejecución respectivamente.
+
+Visto de esta forma, algunos ejemplos con su simbología completa serian:
+
+«rwxr-xr-x» para un archivo con todos los permisos para su propietario, permisos de lectura y ejecución para el grupo y el resto de los usuarios. Esto se representa como 755 en la notación octal.
+
+«r-x——« para un archivo que tiene permisos de lectura y ejecución solo para su propietario. Se representa como 500 en notación octal.
+
+«rw-rw-r–« para un archivo que tiene permisos de lectura y escritura para su propietario y el grupo pero solo permiso de lectura para el resto de los usuarios. Se representa como 664 en la notación octal.
+
